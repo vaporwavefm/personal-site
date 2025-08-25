@@ -393,6 +393,7 @@ body {
 .work{
     width: 100%;
     padding: 2%;
+    display: flex;
 }
 .work__box{
     border-radius: 7px;
@@ -417,13 +418,23 @@ body {
     margin-top: 2rem;
     overflow: hidden;
 }
-.work__badge{
-    background-color: #59ffb91c;
-    border-radius: 10px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    padding: 1rem;
-    margin-right: 1rem;
+.work__badge {
+  background-color: #dafff0;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 1rem;
+  margin-right: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Special case for icons */
+.work__badge img {
+  width: 24px;
+  height: 24px;
+  display: block;
 }
 
 /*
@@ -834,4 +845,102 @@ body {
     100% {
         clip: rect(87px, 9999px, 63px, 0);
     }
+}
+
+.work__img-box img {
+  width: 100%;
+  height: 200px;  
+  object-fit: cover; 
+  border-radius: 8px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark transparent background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.work__img-box:hover .overlay {
+  opacity: 1;
+}
+
+.work__img-box {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.work__img-box img {
+  transition: transform 0.3s ease;
+}
+
+.work__img-box:hover img {
+  transform: scale(1.05); 
+}
+
+.contact__socials {
+  display: flex;
+  gap: 1rem; /* space between icons */
+  margin-top: 1rem;
+}
+
+.contact__socials a {
+  background: #dafff0;
+  border-radius: 50%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.contact__socials a:hover {
+  transform: scale(1.1);
+  background: #aef2db; /* slightly darker on hover */
+}
+
+.contact__socials img {
+  width: 30px;
+  height: 30px;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.contact__form {
+  flex: 1;
+}
+
+.contact__illustration {
+  flex: 1;
+  text-align: center;
+}
+
+.contact__illustration img {
+  max-width: 100%;
+  height: auto;
+}
+
+#heroHeader,
+#works,
+#contact {
+    scroll-margin-top: 120px; 
 }
