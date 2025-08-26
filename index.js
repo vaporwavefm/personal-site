@@ -61,11 +61,11 @@ NAV_LINKS.forEach(link => {
 // Active Link on Scroll
 // -------------------
 const updateActiveLink = () => {
-  const sections = document.querySelectorAll('#heroHeader, #works, #contact');
+  const sections = document.querySelectorAll('#heroHeader, #services, #works, #contact');
   const NAV_BAR_HEIGHT = NAV_BAR.getBoundingClientRect().height;
   const OFFSET = 100;
 
-  let currentSectionId = sections[0].id; // default section
+  let currentSectionId = sections[0].id;
 
   sections.forEach(section => {
     const top = section.getBoundingClientRect().top - NAV_BAR_HEIGHT - OFFSET;
