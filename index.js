@@ -130,3 +130,4 @@ new SweetScroll({
   easing: 'easeOutQuint',
   offset: () => NAV_BAR.getBoundingClientRect().height
 });
+
